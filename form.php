@@ -17,8 +17,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="table.html"><i class="fas fa-table"></i> View Records</a></li>
-                    <li class="active"><a href="form.html"><i class="fas fa-plus-circle"></i> Add Record</a></li>
+                    <li><a href="table.php"><i class="fas fa-table"></i> View Records</a></li>
+                    <li class="active"><a href="form.php"><i class="fas fa-plus-circle"></i> Add Record</a></li>
                     <li><a href="#"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
                     <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                 </ul>
@@ -38,7 +38,7 @@
             
             <div class="content">
                 <div class="card">
-                    <form class="crud-form">
+                    <form class="crud-form" action="function.php" method="post" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="title">Title</label>
@@ -96,8 +96,8 @@
                         </div>
                         
                         <div class="form-actions">
-                            <button type="button" class="btn btn-secondary" onclick="window.location.href='table.html'">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Save Record</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='table.php'">Cancel</button>
+                            <input type="submit" name="btn_submit" class="btn btn-primary" value="Save Record">
                         </div>
                     </form>
                 </div>
