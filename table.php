@@ -21,6 +21,8 @@
                 <ul>
                     <li class="active"><a href="table.php"><i class="fas fa-table"></i> View Records</a></li>
                     <li><a href="form.php"><i class="fas fa-plus-circle"></i> Add Record</a></li>
+                    <li><a href="update.php"><i class="fas fa-edit"></i>Update</a></li>
+
                     <li><a href="#"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
                     <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                 </ul>

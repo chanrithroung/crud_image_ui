@@ -16,8 +16,9 @@
             $price    = $_POST['price'];
             $category = $_POST['category'];
             $status   = $_POST['status'];
+            $description  = $_POST['description'];
 
-            $insert_qeury = "INSERT INTO `product`(`image`, `title`, `category`, `status`) VALUES ('$image','$title','$category','$status')";
+            $insert_qeury = "INSERT INTO `product`(`image`, `title`, `price` , `category`, `status`, `description`) VALUES ('$image','$title', '$price','$category','$status', '$description')";
             $connection->query($insert_qeury);
             header("Location: table.php");
         }
@@ -42,7 +43,7 @@
             
             echo "
                 <tr>
-                    <td>1</td>
+                    <td>$id</td>
                     <td>
                         <div class='table-image'>
                             <img src='http://localhost/myphp/crud_image_9_10/images/$image' alt='Product 1'>
@@ -50,12 +51,12 @@
                     </td>
                     <td>$title</td>
                     <td><span class='badge technology'>$category</span></td>
-                    <td>$12,000</td>
+                    <td>$$price</td>
                     <td><span style='text-transfrom:  capitalize' class='status-badge $status'>$status</span></td>
                     <td>
                         <div class='action-buttons'>
                             <button class='action-btn view-btn' title='View'><i class='fas fa-eye'></i></button>
-                            <button class='action-btn edit-btn' title='Edit' onclick='window.location.href=\'form.html\''><i class='fas fa-edit'></i></button>
+                            <a href='update.php?update_id=$id' class='action-btn edit-btn' title='Edit' onclick='window.location.href=\'form.html\''><i class='fas fa-edit'></i></a>
                             <button class='action-btn delete-btn' title='Delete'><i class='fas fa-trash'></i></button>
                         </div>
                     </td>
